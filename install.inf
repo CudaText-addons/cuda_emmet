@@ -1,6 +1,6 @@
 [info]
 title=Emmet
-desc=Implements commands of Emmet engine
+desc=Implements commands of Emmet engine. Uses CudaText's built-in Emmet engine written in Pascal.
 type=cudatext-plugin
 subdir=cuda_emmet
 homepage=https://github.com/CudaText-addons/cuda_emmet
