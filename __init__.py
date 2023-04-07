@@ -175,7 +175,8 @@ def is_abr_before_caret(ed):
 
     x1 = x
     x2 = x
-    while (x1>0) and s[x1-1].isalnum():
+    ALNUMS = string.digits+string.ascii_letters+'_-'
+    while (x1>0) and (s[x1-1] in ALNUMS):
         x1 -= 1
 
     # symbol before the word? it may be complex snippet like 'li*5' or '#name'. allow.
@@ -344,4 +345,8 @@ class Command:
 
         if key==9 and state=='':
             if is_abr_before_caret(ed_self):
-                return self.expand_ex(False)
+                res = self.expand_ex(False)
+                return res
+            else:
+                pass
+                #print('on_key: not abr')
