@@ -1,3 +1,6 @@
+2023.04.08
++ add: tab-key now supports abbreviations with '-'
+
 2023.02.24
 + initial splitting from CudaText
 + add: i18n support (by Markus F.)
