@@ -96,14 +96,14 @@ class DialogEmmet:
 
     def on_edit_change(self, id_dlg, id_ctl, data='', info=''):
 
-        text = self.result(False) # better keep tabstops
+        text = self.result(False) or '' # better keep tabstops
         if text:
-            s = text.replace('\t', '    ')
-            s = s.split('\n')
-            s = '\t'.join(s)
-            dlg_proc(self.h, DLG_CTL_PROP_SET, name='preview', prop={
-                'val': s,
-            })
+            text = text.replace('\t', '    ')
+            text = text.split('\n')
+            text = '\t'.join(text)
+        dlg_proc(self.h, DLG_CTL_PROP_SET, name='preview', prop={
+            'val': text,
+        })
 
     def on_ok_click(self, id_dlg, id_ctl, data='', info=''):
 
