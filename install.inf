@@ -4,7 +4,7 @@ desc=Implements commands of Emmet engine. Uses CudaText's built-in Emmet engine 
 type=cudatext-plugin
 subdir=cuda_emmet
 homepage=https://github.com/CudaText-addons/cuda_emmet
-$lex=regex:HTML.*|PHP|CSS|Vue
+$lex=regex:HTML.*|PHP|CSS|Vue|Twig
 
 [item1]
 section=commands
